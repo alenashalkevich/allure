@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import utils.Log;
 
 import static com.codeborne.selenide.Selectors.byId;
@@ -13,6 +14,7 @@ public class ProductsPage{
     public SelenideElement sauceLabsBikeLightAddTooCartButton = $(byId("add-to-cart-sauce-labs-bike-light"));
     public SelenideElement productsTitle = $(byXpath("//span[contains(text(),'Products')]"));
 
+    @Step(value = "Adding to cart")
     public void addToCart(SelenideElement AddTooCartButton) {
         Log.info("Добавляем в корзину товар");
         AddTooCartButton.click();

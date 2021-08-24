@@ -12,6 +12,8 @@ public class TestBeforeAllAfterAll {
     @BeforeSuite (groups = {"smokeTest"})
     public void setUp() {
         Log.info("Метод выполняется перед набором тестов, объединенных в suit");
+        Configuration.browser = "chrome";
+        System.setProperty("selenide.browser", "chrome");
         Configuration.startMaximized = true;
         Configuration.timeout = 60000;
            open("https://www.saucedemo.com/");

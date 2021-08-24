@@ -1,6 +1,7 @@
 package tests;
 
 import com.opencsv.CSVReader;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,6 +33,9 @@ public class LogInTest extends TestBeforeAllAfterAll{
         return loginData;
     }
 
+    @Feature(value = "Tests for task 6")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Метод для проверки logIn")
     @Test(groups = {"smokeTest"}, dataProvider = "dataProvider")
     public void logInTest(String logIn, String password) {
         Log.info("Метод для проверки logIn");

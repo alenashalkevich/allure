@@ -3,7 +3,6 @@ package utils;
 import org.apache.log4j.Logger;
 
 public class Log {
-
     private static final Logger log = Logger.getLogger(Log.class);
 
     public static void trace(String message) {
@@ -47,5 +46,4 @@ public class Log {
         log.error(" --- Exception occurs --- ", error);
         throw new AssertionError(error);
     }
-
 }

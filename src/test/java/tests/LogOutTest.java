@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -11,6 +12,9 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class LogOutTest extends TestBeforeAllAfterAll{
 
+    @Feature(value = "Tests for task 6")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Метод для проверки logOut")
     @Parameters({"logIn", "password"})
     @Test(groups = {"smokeTest"})
     public void logOutTest(String logIn, String password) {
